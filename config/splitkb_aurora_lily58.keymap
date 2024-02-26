@@ -23,6 +23,11 @@
             bindings = <&de_ss>;
             key-positions = <36 7>;
         };
+
+        test12 {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <27 28>;
+        };
     };
 
     macros {
@@ -50,8 +55,15 @@
         de_ss: de_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RA(R)>;
+            bindings = <&kt RA(D)>;
             label = "DE_SS";
+        };
+
+        nb_ao: nb_ao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N) &kp A>;
+            label = "NB_AO";
         };
     };
 
@@ -99,11 +111,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3               &kp N4               &kp N5                                           &kp N6  &kp N7               &kp N8               &kp N9   &kp N0  &kp GRAVE
-&kp TAB         &kp X   &kp V   &kp U                &kp C                &kp W                                            &kp N   &kp H                &kp T                &kp E    &kp Q   &de_ss
-&kp DEL         &kp I   &kp L   &hold_mo_tap_kp 4 A  &hold_mo_tap_kp 3 K  &kp SEMI                                         &kp D   &hold_mo_tap_kp 3 J  &hold_mo_tap_kp 4 S  &kp F    &kp G   &kp O
-&kp LEFT_SHIFT  &de_ue  &de_oe  &de_ae               &kp R                &kp Z     &kp LBKT                     &kp RBKT  &kp B   &kp M                &kp COMMA            &kp DOT  &kp Y   &kp RSHFT
-                                &kp LALT             &kp LGUI             &mo 1     &new_behavior LCTRL SPACE    &kp RET   &mo 2   &kp BSPC             &kp RGUI
+&kp ESC         &kp N1  &kp N2               &kp N3               &kp N4               &kp N5                                           &kp N6  &kp N7               &kp N8               &kp N9               &kp N0  &kp GRAVE
+&kp TAB         &kp X   &kp V                &kp U                &kp C                &kp W                                            &kp N   &kp H                &kp T                &kp E                &kp Q   &de_ss
+&kp DEL         &kp I   &hold_mo_tap_kp 5 L  &hold_mo_tap_kp 4 A  &hold_mo_tap_kp 3 K  &kp SEMI                                         &kp D   &hold_mo_tap_kp 3 J  &hold_mo_tap_kp 4 S  &hold_mo_tap_kp 5 F  &kp G   &kp O
+&kp LEFT_SHIFT  &de_ue  &de_oe               &de_ae               &kp R                &kp Z     &kp LBKT                     &kp RBKT  &kp B   &kp M                &kp COMMA            &kp DOT              &kp Y   &kp RSHFT
+                                             &kp LALT             &kp LGUI             &mo 1     &new_behavior LCTRL SPACE    &kp RET   &mo 2   &kp BSPC             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -164,6 +176,16 @@
 &trans  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                      &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp DOT
 &trans  &trans     &kp TAB   &trans    &kp RET    &trans     &trans    &trans  &kp COLON  &kp N1  &kp N2  &kp N3  &kp SEMI   &trans
                              &trans    &trans     &trans     &trans    &trans  &trans     &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &nb_ao  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
