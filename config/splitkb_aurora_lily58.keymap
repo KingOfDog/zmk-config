@@ -50,7 +50,7 @@
         de_ss: de_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RA(S)>;
+            bindings = <&kt RA(R)>;
             label = "DE_SS";
         };
     };
@@ -151,8 +151,8 @@
             bindings = <
 &trans  &trans         &trans      &trans          &trans           &trans                          &trans           &trans                &trans                 &trans            &trans     &trans
 &trans  &trans         &kp UNDER   &kp LBKT        &kp RBKT         &kp CARET                       &kp EXCLAMATION  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL         &kp AMPS   &trans
-&trans  &kp BACKSLASH  &kp SLASH   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTERISK                    &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp COLON  &kp AT
-&trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp SEMI   &trans
+&trans  &kp BACKSLASH  &kp SLASH   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTERISK                    &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp LS(P)  &kp AT
+&trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp P      &trans
                                    &trans          &trans           &trans        &trans    &trans  &trans           &trans                &trans
             >;
         };
