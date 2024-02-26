@@ -14,19 +14,14 @@
     combos {
         compatible = "zmk,combos";
 
-        Test {
-            bindings = <&kp QUESTION>;
-            key-positions = <11 27>;
-        };
-
-        grgrst {
-            bindings = <&de_ss>;
-            key-positions = <36 7>;
-        };
-
-        test12 {
-            bindings = <&kp AMPERSAND>;
+        nb_ae_letter {
+            bindings = <&nb_ae>;
             key-positions = <27 28>;
+        };
+
+        fr_oe_letter {
+            bindings = <&fr_oe>;
+            key-positions = <29 28>;
         };
     };
 
@@ -62,8 +57,64 @@
         nb_ao: nb_ao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(N) &kp A>;
+            bindings = <&kp RA(W)>;
             label = "NB_AO";
+        };
+
+        nb_ae: nb_ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(Z)>;
+            label = "NB_AE";
+        };
+
+        nb_oe: nb_oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(R)>;
+            label = "NB_OE";
+        };
+
+        fr_c: fr_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(C)>;
+            label = "FR_C";
+        };
+
+        accent_down: accent_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(S)>;
+            label = "ACCENT_DOWN";
+        };
+
+        accent_hat: accent_hat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(X)>;
+            label = "ACCENT_HAT";
+        };
+
+        accent_up: accent_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(F)>;
+            label = "ACCENT_UP";
+        };
+
+        fr_oe: fr_oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(V)>;
+            label = "FR_OE";
+        };
+
+        accent_dots: accent_dots {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(G)>;
+            label = "ACCENT_DOTS";
         };
     };
 
@@ -179,13 +230,13 @@
             >;
         };
 
-        layer_5 {
+        foreign_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &nb_ao  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans      &trans       &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans      &trans       &trans        &trans
+&trans  &trans  &trans  &nb_ao  &trans  &trans                    &trans  &accent_down  &accent_up  &accent_hat  &accent_dots  &trans
+&trans  &trans  &nb_oe  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans      &trans       &trans        &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans
             >;
         };
     };
