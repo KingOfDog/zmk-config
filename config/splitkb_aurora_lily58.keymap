@@ -132,7 +132,7 @@
         custom_shift: custom_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 1 &kp LEFT_SHIFT>;
+            bindings = <&kp LEFT_SHIFT>;
             label = "CUSTOM_SHIFT";
         };
     };
