@@ -23,6 +23,11 @@
             bindings = <&fr_oe>;
             key-positions = <29 28>;
         };
+
+        xv_escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <13 14>;
+        };
     };
 
     macros {
@@ -116,6 +121,20 @@
             bindings = <&kp RA(G)>;
             label = "ACCENT_DOTS";
         };
+
+        comp_dots: comp_dots {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F21 &kp DOT &kp DOT>;
+            label = "COMP_DOTS";
+        };
+
+        custom_shift: custom_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 1 &kp LEFT_SHIFT>;
+            label = "CUSTOM_SHIFT";
+        };
     };
 
     behaviors {
@@ -162,14 +181,24 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2               &kp N3               &kp N4               &kp N5                                                &kp N6  &kp N7               &kp N8               &kp N9               &kp N0  &kp GRAVE
-&kp TAB         &kp X   &kp V                &kp U                &kp C                &kp W                                                 &kp N   &kp H                &kp T                &kp E                &kp Q   &de_ss
-&kp DEL         &kp I   &hold_mo_tap_kp 5 L  &hold_mo_tap_kp 4 A  &hold_mo_tap_kp 3 K  &kp SEMI                                              &kp D   &hold_mo_tap_kp 3 J  &hold_mo_tap_kp 4 S  &hold_mo_tap_kp 5 F  &kp G   &kp O
-&kp LEFT_SHIFT  &de_ue  &de_oe               &de_ae               &kp R                &kp Z     &kp F21                      &kp BACKSPACE  &kp B   &kp M                &kp COMMA            &kp DOT              &kp Y   &kp RSHFT
-                                             &kp LALT             &kp LGUI             &mo 1     &new_behavior LCTRL SPACE    &kp RET        &mo 2   &kp BSPC             &kp RGUI
+&kp ESC        &kp N1  &kp N2               &kp N3               &kp N4               &kp N5                                                &kp N6  &kp N7               &kp N8               &kp N9               &kp N0  &kp GRAVE
+&kp TAB        &kp X   &kp V                &kp U                &kp C                &kp W                                                 &kp N   &kp H                &kp T                &kp E                &kp Q   &de_ss
+&kp DEL        &kp I   &hold_mo_tap_kp 6 L  &hold_mo_tap_kp 5 A  &hold_mo_tap_kp 4 K  &kp SEMI                                              &kp D   &hold_mo_tap_kp 4 J  &hold_mo_tap_kp 5 S  &hold_mo_tap_kp 6 F  &kp G   &kp O
+&custom_shift  &de_ue  &de_oe               &de_ae               &kp R                &kp Z     &kp F21                      &kp BACKSPACE  &kp B   &kp M                &kp COMMA            &kp DOT              &kp Y   &custom_shift
+                                            &kp LALT             &kp LGUI             &mo 2     &new_behavior LCTRL SPACE    &kp RET        &mo 3   &kp BSPC             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        custom_shift {
+            bindings = <
+&trans  &kp A   &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
         };
 
         lower_layer {
@@ -213,7 +242,7 @@
         neo_3 {
             bindings = <
 &trans  &trans         &trans      &trans          &trans           &trans                          &trans           &trans                &trans                 &trans            &trans     &trans
-&trans  &trans         &kp UNDER   &kp LBKT        &kp RBKT         &kp CARET                       &kp EXCLAMATION  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL         &kp AMPS   &trans
+&trans  &comp_dots     &kp UNDER   &kp LBKT        &kp RBKT         &kp CARET                       &kp EXCLAMATION  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL         &kp AMPS   &trans
 &trans  &kp BACKSLASH  &kp SLASH   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTERISK                    &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp LS(P)  &kp AT
 &trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp P      &trans
                                    &trans          &trans           &trans        &trans    &trans  &trans           &trans                &trans
