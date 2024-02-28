@@ -132,9 +132,35 @@
         custom_shift: custom_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LEFT_SHIFT &mo 1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &mo 1>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LSHIFT>;
 
             label = "CUSTOM_SHIFT";
+        };
+
+        comp_degree: comp_degree {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F21 &kp O &kp O>;
+            label = "COMP_DEGREE";
+        };
+
+        comp_left_quote: comp_left_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F21 &kp LT &kp LT>;
+            label = "COMP_LEFT_QUOTE";
+        };
+
+        comp_right_macro: comp_right_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F21 &kp LT &kp LT>;
+            label = "COMP_RIGHT_MACRO";
         };
     };
 
@@ -194,11 +220,11 @@
 
         custom_shift {
             bindings = <
-&trans  &kp A   &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &comp_degree  &trans  &trans  &comp_left_quote  &comp_right_macro                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans  &trans            &trans                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans  &trans            &trans                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans  &trans            &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans            &trans             &trans    &trans  &trans  &trans  &trans
             >;
         };
 
