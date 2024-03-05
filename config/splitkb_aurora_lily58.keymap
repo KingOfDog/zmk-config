@@ -181,8 +181,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            flavor = "balanced";
+            retro-tap;
         };
 
         hold_mt_tap_kp: hold_mt_tap_kp {
@@ -195,9 +196,9 @@
             flavor = "tap-preferred";
         };
 
-        new_behavior: new_behavior {
+        hold_tap_kp: hold_tap_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
+            label = "HOLD_TAP_KP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -218,11 +219,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC     &kp N1  &kp N2               &kp N3               &kp N4               &kp N5                                                &kp N6  &kp N7               &kp N8               &kp N9               &kp N0  &kp GRAVE
-&kp TAB     &kp X   &kp V                &kp U                &kp C                &kp W                                                 &kp N   &kp H                &kp T                &kp E                &kp Q   &de_ss
-&kp DEL     &kp I   &hold_mo_tap_kp 6 L  &hold_mo_tap_kp 5 A  &hold_mo_tap_kp 4 K  &kp SEMI                                              &kp D   &hold_mo_tap_kp 4 J  &hold_mo_tap_kp 5 S  &hold_mo_tap_kp 6 F  &kp G   &kp O
-&kp LSHIFT  &de_ue  &de_oe               &de_ae               &kp R                &kp Z     &kp F21                      &kp BACKSPACE  &kp B   &kp M                &kp COMMA            &kp DOT              &kp Y   &kp RSHFT
-                                         &kp LALT             &kp LGUI             &mo 2     &new_behavior LCTRL SPACE    &kp RET        &mo 3   &kp BSPC             &kp RGUI
+&kp ESC     &kp N1  &kp N2               &kp N3               &kp N4               &kp N5                                               &kp N6  &kp N7               &kp N8               &kp N9               &kp N0  &kp GRAVE
+&kp TAB     &kp X   &kp V                &kp U                &kp C                &kp W                                                &kp N   &kp H                &kp T                &kp E                &kp Q   &de_ss
+&kp DEL     &kp I   &hold_mo_tap_kp 6 L  &hold_mo_tap_kp 5 A  &hold_mo_tap_kp 4 K  &kp SEMI                                             &kp D   &hold_mo_tap_kp 4 J  &hold_mo_tap_kp 5 S  &hold_mo_tap_kp 6 F  &kp G   &kp O
+&kp LSHIFT  &de_ue  &de_oe               &de_ae               &kp R                &kp Z     &kp F21                     &kp BACKSPACE  &kp B   &kp M                &kp COMMA            &kp DOT              &kp Y   &kp RSHFT
+                                         &kp LALT             &kp LGUI             &mo 2     &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
