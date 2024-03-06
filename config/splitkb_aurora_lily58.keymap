@@ -205,6 +205,30 @@
             tapping-term-ms = <200>;
             flavor = "tap-unless-interrupted";
         };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            retro-tap;
+            hold-trigger-key-positions = <54 43 55 44 56 45 30 6 7 8 18 19 20 30 31 32 43 44 45 46 54 55 56 57 9 10 11 21 22 23 33 34 35 47 48 49 57>;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            retro-tap;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+        };
     };
 
     keymap {
@@ -219,11 +243,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC     &kp N1  &kp N2               &kp N3               &kp N4               &kp N5                                               &kp N6  &kp N7               &kp N8               &kp N9               &kp N0  &kp GRAVE
-&kp TAB     &kp X   &kp V                &kp U                &kp C                &kp W                                                &kp N   &kp H                &kp T                &kp E                &kp Q   &de_ss
-&kp DEL     &kp I   &hold_mo_tap_kp 6 L  &hold_mo_tap_kp 5 A  &hold_mo_tap_kp 4 K  &kp SEMI                                             &kp D   &hold_mo_tap_kp 4 J  &hold_mo_tap_kp 5 S  &hold_mo_tap_kp 6 F  &kp G   &kp O
-&kp LSHIFT  &de_ue  &de_oe               &de_ae               &kp R                &kp Z     &kp F21                     &kp BACKSPACE  &kp B   &kp M                &kp COMMA            &kp DOT              &kp Y   &kp RSHFT
-                                         &kp LALT             &kp LGUI             &mo 2     &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC             &kp RGUI
+&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4    &kp N5                                               &kp N6  &kp N7    &kp N8     &kp N9    &kp N0  &kp GRAVE
+&kp TAB    &kp X   &kp V     &kp U     &kp C     &kp W                                                &kp N   &kp H     &kp T      &kp E     &kp Q   &de_ss
+&kp DEL    &kp I   &hml 6 L  &hml 5 A  &hml 4 K  &kp SEMI                                             &kp D   &hmr 4 J  &hmr 5 S   &hmr 6 F  &kp G   &kp O
+&kp LSHFT  &de_ue  &de_oe    &de_ae    &kp R     &kp Z     &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp Y   &kp LSHFT
+                             &kp LALT  &kp LGUI  &mo 2     &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -231,11 +255,11 @@
 
         custom_shift {
             bindings = <
-&trans  &comp_degree  &trans  &trans  &comp_left_quote  &comp_right_macro                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans  &trans  &trans            &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans  &trans  &trans            &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans  &trans  &trans            &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans            &trans             &trans    &trans  &trans  &trans  &trans
+&trans   &comp_degree  &trans    &trans    &comp_left_quote  &comp_right_macro                            &trans  &trans    &trans     &trans    &trans  &trans
+&trans   &kp LS(X)     &kp V     &kp U     &kp C             &kp W                                        &kp N   &kp H     &kp T      &kp E     &kp Q   &de_ss
+&kp DEL  &kp I         &hml 6 L  &hml 5 A  &hml 4 K          &kp SEMI                                     &kp D   &hmr 4 J  &hmr 5 S   &hmr 6 F  &kp G   &kp O
+&trans   &de_ue        &de_oe    &de_ae    &kp R             &kp Z              &kp F21    &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp Y   &trans
+                                 &trans    &trans            &trans             &trans     &trans         &trans  &trans    &trans
             >;
         };
 
