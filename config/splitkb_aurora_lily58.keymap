@@ -249,11 +249,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                               &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp GRAVE
-&kp TAB    &kp X     &kp V     &kp U     &kp C     &kp W                                                &kp N   &kp H     &kp T      &kp E     &kp Q     &de_ss
-&kp DEL    &hml 1 I  &hml 6 L  &hml 5 A  &hml 4 K  &kp SEMI                                             &kp D   &hmr 4 J  &hmr 5 S   &hmr 6 F  &hmr 1 G  &kp O
-&kp LSHFT  &de_ue    &de_oe    &de_ae    &kp R     &kp Z     &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp Y     &kp LSHFT
-                               &kp LALT  &kp LGUI  &mo 2     &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC  &kp RGUI
+&kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                             &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp GRAVE
+&kp TAB    &kp X     &kp V     &kp L     &kp C     &kp W                                              &kp K   &kp H     &kp G      &kp F     &kp Q     &de_ss
+&kp DEL    &hml 1 U  &hml 6 I  &hml 5 A  &hml 4 E  &kp O                                              &kp S   &hmr 4 N  &hmr 5 R   &hmr 6 T  &hmr 1 D  &kp Y
+&kp LSHFT  &de_ue    &de_oe    &de_ae    &kp P     &kp Z   &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp J     &kp LSHFT
+                               &kp LALT  &kp LGUI  &mo 2   &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -307,21 +307,21 @@
 
         neo_3 {
             bindings = <
-&trans  &trans         &trans      &trans          &trans           &trans                          &trans           &trans                &trans                 &trans            &trans     &trans
-&trans  &comp_dots     &kp UNDER   &kp LBKT        &kp RBKT         &kp CARET                       &kp EXCLAMATION  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL         &kp AMPS   &trans
-&trans  &kp BACKSLASH  &kp SLASH   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTERISK                    &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp LS(P)  &kp AT
-&trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp P      &trans
+&trans  &trans         &trans      &trans          &trans           &trans                          &trans           &trans                &trans                 &trans            &trans         &trans
+&trans  &comp_dots     &kp UNDER   &kp LBKT        &kp RBKT         &kp CARET                       &kp EXCLAMATION  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL         &kp AMPS       &trans
+&trans  &kp BACKSLASH  &kp SLASH   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTERISK                    &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp COLON      &kp AT
+&trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
                                    &trans          &trans           &trans        &trans    &trans  &trans           &trans                &trans
             >;
         };
 
         neo_4 {
             bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                       &trans     &trans  &trans  &trans  &trans     &trans
-&trans  &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN                    &trans     &kp N7  &kp N8  &kp N9  &kp PLUS   &kp MINUS
-&trans  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                      &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp DOT
-&trans  &trans     &kp TAB   &trans    &kp RET    &trans     &trans    &trans  &kp COLON  &kp N1  &kp N2  &kp N3  &kp SEMI   &trans
-                             &trans    &trans     &trans     &trans    &trans  &trans     &trans  &trans
+&trans  &trans     &trans    &trans    &trans     &trans                                &trans     &trans  &trans  &trans  &trans     &trans
+&trans  &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN                             &trans     &kp N7  &kp N8  &kp N9  &kp PLUS   &kp MINUS
+&trans  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                               &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp DOT
+&trans  &trans     &kp TAB   &trans    &kp RET    &trans     &trans    &trans           &kp COLON  &kp N1  &kp N2  &kp N3  &kp SEMI   &trans
+                             &trans    &trans     &trans     &trans    &kp KP_NUMBER_0  &trans     &trans  &trans
             >;
         };
 
