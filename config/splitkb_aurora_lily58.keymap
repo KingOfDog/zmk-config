@@ -29,11 +29,6 @@
             key-positions = <13 14>;
         };
 
-        test {
-            bindings = <&comp_degree>;
-            key-positions = <36 1>;
-        };
-
         double_shift {
             bindings = <&kp CAPS>;
             key-positions = <36 49>;
@@ -49,28 +44,28 @@
         de_ae: de_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(G) &kp A>;
+            bindings = <&kp RA(A)>;
             label = "DE_AE";
         };
 
         de_oe: de_ao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(P)>;
+            bindings = <&kp RA(O)>;
             label = "DE_OE";
         };
 
         de_ue: de_au {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(O)>;
+            bindings = <&kp RA(U)>;
             label = "DE_UE";
         };
 
         de_ss: de_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RA(D)>;
+            bindings = <&kt RA(S)>;
             label = "DE_SS";
         };
 
