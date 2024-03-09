@@ -257,9 +257,9 @@
         custom_shift {
             bindings = <
 &trans   &kp RA(Y)  &trans     &trans  &comp_left_quote  &comp_right_macro                            &trans  &trans  &trans     &trans   &trans  &trans
-&trans   &kp LS(X)  &kp LS(V)  &kp L   &kp C             &kp W                                        &kp K   &kp H   &kp G      &kp F    &kp Q   &de_ss
-&kp DEL  &kp U      &kp I      &kp A   &kp E             &kp O                                        &kp S   &kp N   &kp R      &kp T    &kp D   &kp Z
-&trans   &de_ue     &de_oe     &de_ae  &kp P             &kp Y              &kp F21    &kp BACKSPACE  &kp B   &kp M   &kp COMMA  &kp DOT  &kp J   &trans
+&trans   &kp LS(X)  &kp LS(V)  &kp LS(L)   &kp LS(C)             &kp LS(W)                                        &kp LS(K)   &kp LS(H)   &kp LS(G)      &kp LS(F)    &kp LS(Q)   &de_ss
+&kp DEL  &kp LS(U)      &kp LS(I)      &kp LS(A)   &kp LS(E)             &kp LS(O)                                        &kp LS(S)   &kp LS(N)   &kp LS(R)      &kp LS(T)    &kp LS(D)   &kp Z
+&trans   &de_ue     &de_oe     &de_ae  &kp LS(P)             &kp LS(Y)              &kp F21    &kp BACKSPACE  &kp LS(B)   &kp LS(M)   &kp COMMA  &kp DOT  &kp LS(J)   &trans
                                &trans  &trans            &trans             &trans     &trans         &trans  &trans  &trans
             >;
         };
