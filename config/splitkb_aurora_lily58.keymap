@@ -72,21 +72,21 @@
         nb_ao: nb_ao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(W)>;
+            bindings = <&kp RA(Q)>;
             label = "NB_AO";
         };
 
         nb_ae: nb_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(Z)>;
+            bindings = <&kp RA(LEFT_BRACKET)>;
             label = "NB_AE";
         };
 
         nb_oe: nb_oe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(R)>;
+            bindings = <&kp RA(D)>;
             label = "NB_OE";
         };
 
@@ -100,28 +100,28 @@
         accent_down: accent_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(S)>;
+            bindings = <&kp RA(G)>;
             label = "ACCENT_DOWN";
         };
 
         accent_hat: accent_hat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(X)>;
+            bindings = <&kp RA(H)>;
             label = "ACCENT_HAT";
         };
 
         accent_up: accent_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(F)>;
+            bindings = <&kp RA(J)>;
             label = "ACCENT_UP";
         };
 
         fr_oe: fr_oe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(V)>;
+            bindings = <&kp RA(P)>;
             label = "FR_OE";
         };
 
@@ -256,11 +256,11 @@
 
         custom_shift {
             bindings = <
-&trans   &comp_degree  &trans    &trans    &comp_left_quote  &comp_right_macro                            &trans  &trans    &trans     &trans    &trans  &trans
-&trans   &kp LS(X)     &kp V     &kp U     &kp C             &kp W                                        &kp N   &kp H     &kp T      &kp E     &kp Q   &de_ss
-&kp DEL  &kp I         &hml 6 L  &hml 5 A  &hml 4 K          &kp SEMI                                     &kp D   &hmr 4 J  &hmr 5 S   &hmr 6 F  &kp G   &kp O
-&trans   &de_ue        &de_oe    &de_ae    &kp R             &kp Z              &kp F21    &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp Y   &trans
-                                 &trans    &trans            &trans             &trans     &trans         &trans  &trans    &trans
+&trans   &kp RA(Y)  &trans     &trans  &comp_left_quote  &comp_right_macro                            &trans  &trans  &trans     &trans   &trans  &trans
+&trans   &kp LS(X)  &kp LS(V)  &kp L   &kp C             &kp W                                        &kp K   &kp H   &kp G      &kp F    &kp Q   &de_ss
+&kp DEL  &kp U      &kp I      &kp A   &kp E             &kp O                                        &kp S   &kp N   &kp R      &kp T    &kp D   &kp Z
+&trans   &de_ue     &de_oe     &de_ae  &kp P             &kp Y              &kp F21    &kp BACKSPACE  &kp B   &kp M   &kp COMMA  &kp DOT  &kp J   &trans
+                               &trans  &trans            &trans             &trans     &trans         &trans  &trans  &trans
             >;
         };
 
