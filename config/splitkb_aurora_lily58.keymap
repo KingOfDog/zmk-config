@@ -35,33 +35,12 @@
         };
 
         toggle_layer_3 {
-            bindings = <&tog 3>;
+            bindings = <&tog 2>;
             key-positions = <55 56>;
         };
     };
 
     macros {
-        de_ae: de_ae {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(A)>;
-            label = "DE_AE";
-        };
-
-        de_oe: de_ao {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(O)>;
-            label = "DE_OE";
-        };
-
-        de_ue: de_au {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(U)>;
-            label = "DE_UE";
-        };
-
         de_ss: de_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -144,10 +123,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_SHIFT &tog 1>,
+                <&kp LEFT_SHIFT &tog 0>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LSHIFT &tog 1>;
+                <&kp LSHIFT &tog 0>;
 
             label = "CUSTOM_SHIFT";
         };
@@ -246,7 +225,61 @@
         my_trow_1: my_trow_1 {
             compatible = "zmk,behavior-mod-morph";
             label = "MY_TROW_1";
-            bindings = <&kp NUMBER_1>, <&kp LS(Y)>;
+            bindings = <&kp NUMBER_1>, <&kp RA(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        my_trow_2: my_trow_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_TROW_2";
+            bindings = <&kp NUMBER_2>, <&kp RA(SEMI)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        my_trow_4: my_trow_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_TROW_4";
+            bindings = <&kp NUMBER_4>, <&kp RA(NUMBER_4)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        my_trow_5: my_trow_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_TROW_5";
+            bindings = <&kp N5>, <&kp RA(N5)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        my_trow_8: my_trow_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_TROW_8";
+            bindings = <&kp N8>, <&kp RA(N8)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        my_trow_9: my_trow_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_TROW_9";
+            bindings = <&kp N9>, <&kp RA(N9)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        my_trow_0: my_trow_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_TROW_0";
+            bindings = <&kp N0>, <&kp RA(N0)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -265,24 +298,14 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &my_trow_1  &kp N2    &kp N3    &kp N4    &kp N5                                             &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp GRAVE
-&kp TAB    &kp X       &kp V     &kp L     &kp C     &kp W                                              &kp K   &kp H     &kp G      &kp F     &kp Q     &sharp_s_bracket
-&kp DEL    &hml 1 U    &hml 6 I  &hml 5 A  &hml 4 E  &kp O                                              &kp S   &hmr 4 N  &hmr 5 R   &hmr 6 T  &hmr 1 D  &kp Y
-&kp LSHFT  &de_ue      &de_oe    &de_ae    &kp P     &kp Z   &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp J     &kp LSHFT
-                                 &kp LALT  &kp LGUI  &mo 2   &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC  &kp RGUI
+&kp ESC    &my_trow_1  &my_trow_2  &kp N3     &my_trow_4  &my_trow_5                                             &kp N6  &kp N7    &my_trow_8  &my_trow_9  &my_trow_0  &kp GRAVE
+&kp TAB    &kp X       &kp V       &kp L      &kp C       &kp W                                                  &kp K   &kp H     &kp G       &kp F       &kp Q       &sharp_s_bracket
+&kp DEL    &kp U       &hml 5 I    &hml 4 A   &hml 3 E    &kp O                                                  &kp S   &hmr 3 N  &hmr 4 R    &hmr 5 T    &kp D       &kp Y
+&kp LSHFT  &kp RA(U)   &kp RA(O)   &kp RA(A)  &kp P       &kp Z       &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA   &kp DOT     &kp J       &kp LSHFT
+                                   &kp LALT   &kp LGUI    &mo 1       &hold_tap_kp LCTRL SPACE    &kp RET        &mo 2   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        custom_shift {
-            bindings = <
-&trans  &kp RA(Y)  &trans     &trans     &comp_left_quote  &comp_right_macro                    &trans     &trans     &trans     &trans     &trans     &trans
-&trans  &kp LS(X)  &kp LS(V)  &kp LS(L)  &kp LS(C)         &kp LS(W)                            &kp LS(K)  &kp LS(H)  &kp LS(G)  &kp LS(F)  &kp LS(Q)  &de_ss
-&trans  &kp LS(U)  &kp LS(I)  &kp LS(A)  &kp LS(E)         &kp LS(O)                            &kp LS(S)  &kp LS(N)  &kp LS(R)  &kp LS(T)  &kp LS(D)  &kp LS(Z)
-&trans  &de_ue     &de_oe     &de_ae     &kp LS(P)         &kp LS(Y)          &trans    &trans  &kp LS(B)  &kp LS(M)  &kp COMMA  &kp DOT    &kp LS(J)  &trans
-                              &trans     &trans            &trans             &trans    &trans  &trans     &trans     &trans
-            >;
         };
 
         lower_layer {
@@ -333,11 +356,11 @@
 
         neo_4 {
             bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                                &trans     &trans  &trans  &trans  &trans     &trans
-&trans  &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN                             &trans     &kp N7  &kp N8  &kp N9  &kp PLUS   &kp MINUS
-&trans  &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                               &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp DOT
-&trans  &trans     &kp TAB   &trans    &kp RET    &trans     &trans    &trans           &kp COLON  &kp N1  &kp N2  &kp N3  &kp SEMI   &trans
-                             &trans    &trans     &trans     &trans    &kp KP_NUMBER_0  &trans     &trans  &trans
+&trans  &trans     &trans    &trans      &trans     &trans                                &trans            &kp TAB          &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_SUBTRACT  &trans
+&trans  &kp PG_UP  &kp BSPC  &kp UP      &kp DEL    &kp PG_DN                             &kp RA(N1)        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans
+&trans  &kp HOME   &kp LEFT  &kp DOWN    &kp RIGHT  &kp END                               &kp RA(NUMBER_2)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA        &kp DOT
+&trans  &trans     &kp TAB   &kp INSERT  &kp RET    &trans     &trans    &trans           &kp COLON         &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI         &trans
+                             &trans      &trans     &trans     &trans    &kp KP_NUMBER_0  &trans            &trans           &trans
             >;
         };
 
