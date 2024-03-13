@@ -35,7 +35,7 @@
         };
 
         toggle_layer_3 {
-            bindings = <&tog 2>;
+            bindings = <&tog 4>;
             key-positions = <55 56>;
         };
     };
@@ -300,12 +300,32 @@
             bindings = <
 &kp ESC    &my_trow_1  &my_trow_2  &kp N3     &my_trow_4  &my_trow_5                                             &kp N6  &kp N7    &my_trow_8  &my_trow_9  &my_trow_0  &kp GRAVE
 &kp TAB    &kp X       &kp V       &kp L      &kp C       &kp W                                                  &kp K   &kp H     &kp G       &kp F       &kp Q       &sharp_s_bracket
-&kp DEL    &kp U       &hml 5 I    &hml 4 A   &hml 3 E    &kp O                                                  &kp S   &hmr 3 N  &hmr 4 R    &hmr 5 T    &kp D       &kp Y
+&kp DEL    &kp U       &hml 5 I    &hml 2 A   &hml 1 E    &kp O                                                  &kp S   &hmr 1 N  &hmr 2 R    &hmr 5 T    &kp D       &kp Y
 &kp LSHFT  &kp RA(U)   &kp RA(O)   &kp RA(A)  &kp P       &kp Z       &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA   &kp DOT     &kp J       &kp RSHIFT
-                                   &kp LALT   &kp LGUI    &mo 1       &hold_tap_kp LCTRL SPACE    &kp RET        &mo 2   &trans    &trans
+                                   &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &kp RET        &mo 4   &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        neo_3 {
+            bindings = <
+&trans  &trans         &trans      &trans          &trans           &trans                          &trans           &trans                &trans                 &trans            &trans         &trans
+&trans  &comp_dots     &kp UNDER   &kp LBKT        &kp RBKT         &kp CARET                       &kp EXCLAMATION  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL         &kp AMPS       &trans
+&trans  &kp BACKSLASH  &kp SLASH   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTERISK                    &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp COLON      &kp AT
+&trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
+                                   &trans          &trans           &trans        &trans    &trans  &trans           &trans                &trans
+            >;
+        };
+
+        neo_4 {
+            bindings = <
+&trans  &trans     &trans    &trans      &trans     &trans                                &trans            &kp TAB          &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_SUBTRACT  &trans
+&trans  &kp PG_UP  &kp BSPC  &kp UP      &kp DEL    &kp PG_DN                             &kp RA(N1)        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans
+&trans  &kp HOME   &kp LEFT  &kp DOWN    &kp RIGHT  &kp END                               &kp RA(NUMBER_2)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA        &kp DOT
+&trans  &trans     &kp TAB   &kp INSERT  &kp RET    &trans     &trans    &trans           &kp COLON         &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI         &trans
+                             &trans      &trans     &tog 2     &trans    &kp KP_NUMBER_0  &tog 2            &trans           &trans
+            >;
         };
 
         lower_layer {
@@ -319,7 +339,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans       &trans    &trans    &trans
 &kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9       &kp F10   &kp F11   &kp F12
-&kp GRAVE   &caps_word        &tog 5             &tog 4             &tog 3        &kp PRCNT                       &kp CARET  &tog 3     &tog 4       &tog 5    &kp RPAR  &kp TILDE
+&kp GRAVE   &caps_word        &tog 5             &tog 2             &tog 1        &kp PRCNT                       &kp CARET  &tog 1     &tog 2       &tog 5    &kp RPAR  &kp TILDE
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC  &kp PIPE
                                                  &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
@@ -341,26 +361,6 @@
 &kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &kp HOME    &kp LEFT          &kp DOWN      &kp RIGHT_ARROW  &kp END            &trans
 &kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
                            &trans   &trans   &trans   &trans    &trans  &trans      &trans            &trans
-            >;
-        };
-
-        neo_3 {
-            bindings = <
-&trans  &trans         &trans      &trans          &trans           &trans                          &trans           &trans                &trans                 &trans            &trans         &trans
-&trans  &comp_dots     &kp UNDER   &kp LBKT        &kp RBKT         &kp CARET                       &kp EXCLAMATION  &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL         &kp AMPS       &trans
-&trans  &kp BACKSLASH  &kp SLASH   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTERISK                    &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp COLON      &kp AT
-&trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
-                                   &trans          &trans           &trans        &trans    &trans  &trans           &trans                &trans
-            >;
-        };
-
-        neo_4 {
-            bindings = <
-&trans  &trans     &trans    &trans      &trans     &trans                                &trans            &kp TAB          &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_SUBTRACT  &trans
-&trans  &kp PG_UP  &kp BSPC  &kp UP      &kp DEL    &kp PG_DN                             &kp RA(N1)        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans
-&trans  &kp HOME   &kp LEFT  &kp DOWN    &kp RIGHT  &kp END                               &kp RA(NUMBER_2)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA        &kp DOT
-&trans  &trans     &kp TAB   &kp INSERT  &kp RET    &trans     &trans    &trans           &kp COLON         &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI         &trans
-                             &trans      &trans     &tog 4     &trans    &kp KP_NUMBER_0  &tog 4            &trans           &trans
             >;
         };
 
