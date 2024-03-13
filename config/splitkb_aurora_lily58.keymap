@@ -301,7 +301,7 @@
 &kp ESC    &my_trow_1  &my_trow_2  &kp N3     &my_trow_4  &my_trow_5                                             &kp N6  &kp N7    &my_trow_8  &my_trow_9  &my_trow_0  &kp GRAVE
 &kp TAB    &kp X       &kp V       &kp L      &kp C       &kp W                                                  &kp K   &kp H     &kp G       &kp F       &kp Q       &sharp_s_bracket
 &kp DEL    &kp U       &hml 5 I    &hml 4 A   &hml 3 E    &kp O                                                  &kp S   &hmr 3 N  &hmr 4 R    &hmr 5 T    &kp D       &kp Y
-&kp LSHFT  &kp RA(U)   &kp RA(O)   &kp RA(A)  &kp P       &kp Z       &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA   &kp DOT     &kp J       &kp LSHFT
+&kp LSHFT  &kp RA(U)   &kp RA(O)   &kp RA(A)  &kp P       &kp Z       &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA   &kp DOT     &kp J       &kp RSHIFT
                                    &kp LALT   &kp LGUI    &mo 1       &hold_tap_kp LCTRL SPACE    &kp RET        &mo 2   &trans    &trans
             >;
 
@@ -319,7 +319,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
 &kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
+&kp GRAVE   &caps_word        &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
                                                  &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
