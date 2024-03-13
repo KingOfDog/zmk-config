@@ -232,6 +232,25 @@
             retro-tap;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
         };
+
+        sharp_s_bracket: sharp_s_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHARP_S_BRACKET";
+            bindings = <&de_ss>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        my_trow_1: my_trow_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MY_TROW_1";
+            bindings = <&kp NUMBER_1>, <&kp LS(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -246,11 +265,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                             &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp GRAVE
-&kp TAB    &kp X     &kp V     &kp L     &kp C     &kp W                                              &kp K   &kp H     &kp G      &kp F     &kp Q     &de_ss
-&kp DEL    &hml 1 U  &hml 6 I  &hml 5 A  &hml 4 E  &kp O                                              &kp S   &hmr 4 N  &hmr 5 R   &hmr 6 T  &hmr 1 D  &kp Y
-&kp LSHFT  &de_ue    &de_oe    &de_ae    &kp P     &kp Z   &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp J     &kp LSHFT
-                               &kp LALT  &kp LGUI  &mo 2   &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC  &kp RGUI
+&kp ESC    &my_trow_1  &kp N2    &kp N3    &kp N4    &kp N5                                             &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp GRAVE
+&kp TAB    &kp X       &kp V     &kp L     &kp C     &kp W                                              &kp K   &kp H     &kp G      &kp F     &kp Q     &sharp_s_bracket
+&kp DEL    &hml 1 U    &hml 6 I  &hml 5 A  &hml 4 E  &kp O                                              &kp S   &hmr 4 N  &hmr 5 R   &hmr 6 T  &hmr 1 D  &kp Y
+&kp LSHFT  &de_ue      &de_oe    &de_ae    &kp P     &kp Z   &kp F21                     &kp BACKSPACE  &kp B   &kp M     &kp COMMA  &kp DOT   &kp J     &kp LSHFT
+                                 &kp LALT  &kp LGUI  &mo 2   &hold_tap_kp LCTRL SPACE    &kp RET        &mo 3   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
