@@ -367,7 +367,7 @@
         foreign_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans      &trans       &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans      &trans       &trans        &trans
+&trans  &trans  &trans  &trans  &fr_c   &trans                    &trans  &trans        &trans      &trans       &trans        &trans
 &trans  &trans  &trans  &nb_ao  &nb_ae  &fr_oe                    &trans  &accent_down  &accent_up  &accent_hat  &accent_dots  &trans
 &trans  &trans  &nb_oe  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans      &trans       &trans        &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans
