@@ -40,6 +40,11 @@
             bindings = <&tog 4>;
             key-positions = <55 56>;
         };
+
+        u_grave {
+            bindings = <&accent_letter RA(G) U>;
+            key-positions = <11 25>;
+        };
     };
 
     macros {
@@ -152,6 +157,13 @@
             #binding-cells = <0>;
             bindings = <&kp F21 &kp LT &kp LT>;
             label = "COMP_RIGHT_MACRO";
+        };
+
+        accent_letter: accent_letter {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            label = "ACCENT_LETTER";
         };
     };
 
