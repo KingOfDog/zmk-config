@@ -378,7 +378,7 @@
             bindings = <
 &trans  &trans                  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &accent_letter RA(G) U  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &accent_letter RA(G) U  &accent_letter RA(G) I  &accent_letter RA(G) A  &accent_letter RA(G) E  &accent_letter RA(G) O                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
@@ -388,7 +388,7 @@
             bindings = <
 &trans  &trans                  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &accent_letter RA(J) U  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &accent_letter RA(J) U  &accent_letter RA(J) I  &accent_letter RA(J) A  &accent_letter RA(J) E  &accent_letter RA(J) O                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
@@ -398,7 +398,7 @@
             bindings = <
 &trans  &trans                  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &accent_letter RA(H) U  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &accent_letter RA(H) U  &accent_letter RA(H) I  &accent_letter RA(H) A  &accent_letter RA(H) E  &accent_letter RA(H) O                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
