@@ -180,11 +180,11 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             retro-tap;
             hold-while-undecided;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <100>;
         };
 
         hml: hml {
