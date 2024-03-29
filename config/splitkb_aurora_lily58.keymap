@@ -196,7 +196,7 @@
             flavor = "balanced";
             retro-tap;
             hold-trigger-key-positions = <54 43 55 44 56 45 30 6 7 8 18 19 20 30 31 32 43 44 45 46 54 55 56 57 9 10 11 21 22 23 33 34 35 47 48 49 57>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <50>;
         };
 
         hmr: hmr {
@@ -209,7 +209,7 @@
             flavor = "balanced";
             retro-tap;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <50>;
         };
 
         sharp_s_bracket: sharp_s_bracket {
@@ -298,11 +298,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &my_trow_1  &my_trow_2  &kp N3     &my_trow_4  &my_trow_5                                             &kp N6                       &kp N7    &my_trow_8  &my_trow_9  &my_trow_0  &kp GRAVE
-&kp TAB    &kp X       &kp V       &kp L      &kp C       &kp W                                                  &kp K                        &hmr 8 H  &hmr 6 G    &hmr 7 F    &kp Q       &sharp_s_bracket
-&kp DEL    &kp U       &hml 5 I    &hml 2 A   &hml 1 E    &kp O                                                  &kp S                        &hmr 1 N  &hmr 2 R    &hmr 5 T    &kp D       &kp Y
-&kp LSHFT  &kp RA(U)   &kp RA(O)   &kp RA(A)  &kp P       &kp Z       &kp F21                     &kp BACKSPACE  &kp B                        &kp M     &kp COMMA   &kp DOT     &kp J       &kp RSHIFT
-                                   &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &kp RET        &hold_mo_tap_kp 4 BACKSPACE  &trans    &trans
+&kp ESC    &my_trow_1  &my_trow_2  &kp N3     &my_trow_4  &my_trow_5                                             &kp N6                       &kp N7           &my_trow_8  &my_trow_9  &my_trow_0  &kp GRAVE
+&kp TAB    &kp X       &kp V       &kp L      &kp C       &kp W                                                  &kp K                        &hmr 8 H         &hmr 6 G    &hmr 7 F    &kp Q       &sharp_s_bracket
+&kp DEL    &kp U       &hml 5 I    &hml 2 A   &hml 1 E    &kp O                                                  &kp S                        &hmr 1 N         &hmr 2 R    &hmr 5 T    &kp D       &kp Y
+&kp LSHFT  &kp RA(U)   &kp RA(O)   &kp RA(A)  &kp P       &kp Z       &kp F21                     &kp BACKSPACE  &kp B                        &kp M            &kp COMMA   &kp DOT     &kp J       &kp RSHIFT
+                                   &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &kp RET        &hold_mo_tap_kp 4 BACKSPACE  &kp LA(LC(F20))  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -341,7 +341,7 @@
 &kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9       &kp F10   &kp F11   &kp F12
 &kp GRAVE   &caps_word        &tog 5             &tog 2             &tog 1        &kp PRCNT                       &kp CARET  &tog 1     &tog 2       &tog 5    &kp RPAR  &kp TILDE
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC  &kp PIPE
-                                                 &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
+                                                 &trans             &trans        &trans        &trans    &trans  &trans     &tog 9     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -401,6 +401,16 @@
 &trans  &accent_letter RA(H) U  &accent_letter RA(H) I  &accent_letter RA(H) A  &accent_letter RA(H) E  &accent_letter RA(H) O                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                         &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        qwerty {
+            bindings = <
+&trans  &trans  &trans  &trans    &trans    &trans                    &trans  &trans    &trans     &trans   &trans    &trans
+&trans  &kp Q   &kp W   &kp E     &kp R     &kp T                     &kp Y   &kp U     &kp I      &kp O    &kp P     &kp LBKT
+&trans  &kp A   &kp S   &hml 2 D  &hml 1 F  &kp G                     &kp H   &hmr 1 J  &hmr 2 K   &kp L    &kp SEMI  &kp APOS
+&trans  &kp Z   &kp X   &kp C     &kp V     &kp B   &trans    &trans  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans
             >;
         };
     };
