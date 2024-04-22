@@ -181,7 +181,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "balanced";
-            retro-tap;
             hold-while-undecided;
             require-prior-idle-ms = <100>;
         };
@@ -293,7 +292,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            retro-tap;
             hold-trigger-key-positions = <54 43 55 44 56 45 30 6 7 8 18 19 20 30 31 32 43 44 45 46 54 55 56 57 9 10 11 21 22 23 33 34 35 47 48 49 57>;
             hold-while-undecided;
         };
@@ -306,7 +304,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            retro-tap;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             hold-while-undecided;
         };
@@ -324,11 +321,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp CAPSLOCK  &my_trow_1           &my_trow_2  &kp N3     &my_trow_4  &my_trow_5                                       &kp N6                       &kp N7           &my_trow_8  &my_trow_9  &my_trow_0       &kp GRAVE
-&kp TAB       &kp X                &kp V       &kp L      &kp C       &kp W                                            &kp K                        &hmr 8 H         &hmr 6 G    &hmr 7 F    &kp Q            &sharp_s_bracket
-&kp ESCAPE    &hmodl LCTRL U       &hml 5 I    &hml 2 A   &hml 1 E    &kp O                                            &kp S                        &hmr 1 N         &hmr 2 R    &hmr 5 T    &hmodr RCTRL D   &kp Y
-&kp DELETE    &hmodl LSHIFT RA(U)  &kp RA(O)   &kp RA(A)  &kp P       &kp Z       &kp F21                     &trans   &kp B                        &kp M            &kp COMMA   &kp DOT     &hmodr RSHIFT J  &kp BACKSPACE
-                                               &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &kp RET  &hold_mo_tap_kp 4 BACKSPACE  &kp LA(LC(F20))  &trans
+&kp CAPSLOCK       &my_trow_1           &my_trow_2             &kp N3     &my_trow_4  &my_trow_5                                       &kp N6                       &kp N7           &my_trow_8  &my_trow_9            &my_trow_0       &kp GRAVE
+&kp TAB            &kp X                &kp V                  &kp L      &kp C       &kp W                                            &kp K                        &hmr 8 H         &hmr 6 G    &hmr 7 F              &kp Q            &sharp_s_bracket
+&kp ESCAPE         &hmodl LCTRL U       &hml 5 I               &hml 2 A   &hml 1 E    &kp O                                            &kp S                        &hmr 1 N         &hmr 2 R    &hmr 5 T              &hmodr RCTRL D   &kp Y
+&hmodl LSHIFT DEL  &hmodl LSHIFT RA(U)  &hmodl LEFT_ALT RA(O)  &kp RA(A)  &kp P       &kp Z       &kp F21                     &trans   &kp B                        &kp M            &kp COMMA   &hmodr RIGHT_ALT DOT  &hmodr RSHIFT J  &hmodr RSHIFT BACKSPACE
+                                                               &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &kp RET  &hold_mo_tap_kp 4 BACKSPACE  &kp LA(LC(F20))  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
