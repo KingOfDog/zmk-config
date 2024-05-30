@@ -330,7 +330,9 @@
                                                                &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &kp RET  &hold_mo_tap_kp 4 BACKSPACE  &kp LA(LC(F20))  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         neo_3 {
