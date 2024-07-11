@@ -294,7 +294,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <54 43 55 44 56 45 30 6 7 8 18 19 20 30 31 32 43 44 45 46 54 55 56 57 9 10 11 21 22 23 33 34 35 47 48 49 57>;
-            hold-while-undecided;
             quick-tap-ms = <150>;
             hold-while-undecided-linger;
         };
