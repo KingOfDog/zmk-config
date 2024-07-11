@@ -181,8 +181,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             require-prior-idle-ms = <100>;
+            hold-trigger-key-positions = <12>;
         };
 
         hml: hml {
@@ -307,6 +308,20 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             quick-tap-ms = <150>;
         };
+
+        accent_mod: accent_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ACCENT_MOD";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            retro-tap;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+            require-prior-idle-ms = <50>;
+            quick-tap-ms = <150>;
+        };
     };
 
     keymap {
@@ -321,11 +336,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp CAPSLOCK       &my_trow_1               &my_trow_2                 &kp N3         &my_trow_4  &my_trow_5                                                         &kp N6                       &kp N7          &my_trow_8  &my_trow_9            &my_trow_0       &kp GRAVE
-&kp TAB            &kp X                    &kp V                      &kp L          &kp C       &kp W                                                              &kp K                        &hmr 8 H        &hmr 6 G    &hmr 7 F              &kp Q            &sharp_s_bracket
-&kp ESCAPE         &hmodl LCTRL U           &hml 5 I                   &hml 2 A       &hml 1 E    &kp O                                                              &kp S                        &hmr 1 N        &hmr 2 R    &hmr 5 T              &hmodr RCTRL D   &kp Y
-&hmodl LSHIFT DEL  &hmodl LSHIFT RA(RC(U))  &hmodl LEFT_ALT RA(RC(O))  &kp RA(RC(A))  &kp P       &kp Z       &kp F21                     &kp C_MUTE                 &kp B                        &kp M           &kp COMMA   &hmodr RIGHT_ALT DOT  &hmodr RSHIFT J  &hmodr RSHIFT BACKSPACE
-                                                                       &kp LALT       &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &hold_tap_kp LEFT_ALT RET  &hold_mo_tap_kp 4 BACKSPACE  &sk LEFT_SHIFT  &sk LCTRL
+&kp CAPSLOCK       &my_trow_1               &my_trow_2                 &kp N3         &my_trow_4  &my_trow_5                                                         &kp N6                       &kp N7           &my_trow_8       &my_trow_9            &my_trow_0       &kp GRAVE
+&kp TAB            &kp X                    &kp V                      &kp L          &kp C       &kp W                                                              &kp K                        &accent_mod 8 H  &accent_mod 6 G  &accent_mod 7 F       &kp Q            &sharp_s_bracket
+&kp ESCAPE         &hmodl LCTRL U           &hml 5 I                   &hml 2 A       &hml 1 E    &kp O                                                              &kp S                        &hmr 1 N         &hmr 2 R         &hmr 5 T              &hmodr RCTRL D   &kp Y
+&hmodl LSHIFT DEL  &hmodl LSHIFT RA(RC(U))  &hmodl LEFT_ALT RA(RC(O))  &kp RA(RC(A))  &kp P       &kp Z       &kp F21                     &kp C_MUTE                 &kp B                        &kp M            &kp COMMA        &hmodr RIGHT_ALT DOT  &hmodr RSHIFT J  &hmodr RSHIFT BACKSPACE
+                                                                       &kp LALT       &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &hold_tap_kp LEFT_ALT RET  &hold_mo_tap_kp 4 BACKSPACE  &sk LEFT_SHIFT   &sk LCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
