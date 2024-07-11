@@ -296,6 +296,7 @@
             hold-trigger-key-positions = <54 43 55 44 56 45 30 6 7 8 18 19 20 30 31 32 43 44 45 46 54 55 56 57 9 10 11 21 22 23 33 34 35 47 48 49 57>;
             hold-while-undecided;
             quick-tap-ms = <150>;
+            hold-while-undecided-linger;
         };
 
         hmodr: hmodr {
@@ -324,11 +325,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp CAPSLOCK       &my_trow_1           &my_trow_2             &kp N3     &my_trow_4  &my_trow_5                                          &kp N6                       &kp N7          &my_trow_8  &my_trow_9            &my_trow_0       &kp GRAVE
-&kp TAB            &kp X                &kp V                  &kp L      &kp C       &kp W                                               &kp K                        &hmr 8 H        &hmr 6 G    &hmr 7 F              &kp Q            &sharp_s_bracket
-&kp ESCAPE         &hmodl LCTRL U       &hml 5 I               &hml 2 A   &hml 1 E    &kp O                                               &kp S                        &hmr 1 N        &hmr 2 R    &hmr 5 T              &hmodr RCTRL D   &kp Y
-&hmodl LSHIFT DEL  &hmodl LSHIFT RA(U)  &hmodl LEFT_ALT RA(O)  &kp RA(A)  &kp P       &kp Z       &kp F21                     &kp C_MUTE  &kp B                        &kp M           &kp COMMA   &hmodr RIGHT_ALT DOT  &hmodr RSHIFT J  &hmodr RSHIFT BACKSPACE
-                                                               &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &kp RET     &hold_mo_tap_kp 4 BACKSPACE  &sk LEFT_SHIFT  &sk LCTRL
+&kp CAPSLOCK       &my_trow_1               &my_trow_2                 &kp N3         &my_trow_4  &my_trow_5                                                         &kp N6                       &kp N7          &my_trow_8  &my_trow_9            &my_trow_0       &kp GRAVE
+&kp TAB            &kp X                    &kp V                      &kp L          &kp C       &kp W                                                              &kp K                        &hmr 8 H        &hmr 6 G    &hmr 7 F              &kp Q            &sharp_s_bracket
+&kp ESCAPE         &hmodl LCTRL U           &hml 5 I                   &hml 2 A       &hml 1 E    &kp O                                                              &kp S                        &hmr 1 N        &hmr 2 R    &hmr 5 T              &hmodr RCTRL D   &kp Y
+&hmodl LSHIFT DEL  &hmodl LSHIFT RA(RC(U))  &hmodl LEFT_ALT RA(RC(O))  &kp RA(RC(A))  &kp P       &kp Z       &kp F21                     &kp C_MUTE                 &kp B                        &kp M           &kp COMMA   &hmodr RIGHT_ALT DOT  &hmodr RSHIFT J  &hmodr RSHIFT BACKSPACE
+                                                                       &kp LALT       &kp LGUI    &mo 3       &hold_tap_kp LCTRL SPACE    &hold_tap_kp RET LEFT_ALT  &hold_mo_tap_kp 4 BACKSPACE  &sk LEFT_SHIFT  &sk LCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
