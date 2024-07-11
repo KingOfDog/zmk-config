@@ -183,7 +183,7 @@
             quick-tap-ms = <150>;
             flavor = "balanced";
             require-prior-idle-ms = <100>;
-            hold-trigger-key-positions = <12>;
+            hold-trigger-key-positions = <12 16 14 30>;
         };
 
         hml: hml {
