@@ -104,7 +104,7 @@
         comp_dots: comp_dots {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F21 &kp DOT &kp DOT>;
+            bindings = <&kp RA(X)>;
             label = "COMP_DOTS";
         };
 
@@ -124,21 +124,21 @@
         comp_degree: comp_degree {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F21 &kp O &kp O>;
+            bindings = <&kp RA(NUMBER_1)>;
             label = "COMP_DEGREE";
         };
 
         comp_left_quote: comp_left_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F21 &kp LT &kp LT>;
+            bindings = <&kp RA(N5)>;
             label = "COMP_LEFT_QUOTE";
         };
 
         comp_right_macro: comp_right_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F21 &kp LT &kp LT>;
+            bindings = <&kp RA(NUMBER_4)>;
             label = "COMP_RIGHT_MACRO";
         };
 
