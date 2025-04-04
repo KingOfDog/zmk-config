@@ -1,4 +1,4 @@
-/*
+ü/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -367,6 +367,8 @@
 &trans  &kp HASH       &kp DOLLAR  &kp PIPE        &kp TILDE        &kp GRAVE     &trans    &trans  &kp PLUS         &kp PERCENT           &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
                                    &trans          &trans           &trans        &trans    &trans  &kp DELETE       &trans                &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         neo_4 {
@@ -377,6 +379,8 @@
 &trans  &trans     &kp TAB   &kp INSERT  &kp RET    &trans     &trans    &trans           &kp COLON         &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMI         &trans
                              &trans      &trans     &tog 2     &trans    &kp KP_NUMBER_0  &tog 2            &trans           &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -395,7 +399,7 @@
                                                  &trans             &trans        &trans        &trans    &trans  &trans        &tog 9        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -413,6 +417,8 @@
 &kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
                            &trans   &trans   &trans   &trans    &trans  &trans      &trans            &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         foreign_layer {
@@ -423,6 +429,8 @@
 &trans  &trans  &nb_oe  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans      &trans       &trans        &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         grave_accent {
@@ -433,6 +441,8 @@
 &trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                         &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         acute_accent {
@@ -443,6 +453,8 @@
 &trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                         &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         circonflex_accent {
@@ -453,6 +465,8 @@
 &trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                         &trans                  &trans                  &trans                  &trans    &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         qwerty {
@@ -463,6 +477,8 @@
 &trans   &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
                          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
     };
 };
