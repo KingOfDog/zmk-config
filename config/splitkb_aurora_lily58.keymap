@@ -28,6 +28,11 @@
             bindings = <&tog 4>;
             key-positions = <55 56>;
         };
+
+        accent_layer_ae {
+            bindings = <&mo 0>;
+            key-positions = <28 27>;
+        };
     };
 
     macros {
@@ -350,7 +355,7 @@
 
             bindings = <
 &kp CAPSLOCK       &my_trow_1           &my_trow_2             &kp N3     &my_trow_4  &my_trow_5                                                                &kp N6                       &kp N7           &my_trow_8       &my_trow_9            &my_trow_0       &kp GRAVE
-&kp TAB            &kp X                &kp V                  &kp L      &kp C       &kp W                                                                     &kp K                        &accent_mod 8 H  &accent_mod 6 G  &accent_mod 7 F       &kp Q            &sharp_s_bracket
+&kp TAB            &kp X                &kp V                  &kp L      &kp C       &kp W                                                                     &kp K                        &accent_mod 8 H  &accent_mod 6 G  &accent_mod 7 F       &kp Q            &mo 5
 &kp ESCAPE         &hmodl LCTRL U       &hml 5 I               &hml 2 A   &hml 1 E    &kp O                                                                     &kp S                        &hmr 1 N         &hmr 2 R         &hmr 5 T              &hmodr RCTRL D   &kp Y
 &hmodl LSHIFT DEL  &hmodl LSHIFT RA(U)  &hmodl LEFT_ALT RA(O)  &kp RA(A)  &kp P       &kp Z       &mt LC(LG(LA(LSHIFT))) F21         &kp C_MUTE                 &kp B                        &kp M            &kp COMMA        &hmodr RIGHT_ALT DOT  &hmodr RSHIFT J  &hmodr RSHIFT BACKSPACE
                                                                &kp LALT   &kp LGUI    &mo 3       &hold_tap_kp_linger LCTRL SPACE    &hold_tap_kp LEFT_ALT RET  &hold_mo_tap_kp 4 BACKSPACE  &sk LEFT_SHIFT   &sk LCTRL
@@ -396,7 +401,7 @@
 &kp F1          &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7        &kp F8        &kp F9        &kp F10   &kp F11         &kp F12
 &kp GRAVE       &caps_word        &tog 5             &tog 2             &tog 1        &kp PRCNT                       &kp CARET     &tog 1        &tog 2        &tog 5    &kp RPAR        &kp TILDE
 &studio_unlock  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans        &kp MINUS     &kp KP_PLUS   &kp LBRC  &kp RBRC        &kp PIPE
-                                                     &trans             &trans        &trans        &trans    &trans  &trans        &tog 9        &trans
+                                                     &trans             &trans        &trans        &trans    &trans  &kp DELETE    &tog 9        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -423,11 +428,11 @@
 
         foreign_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans      &trans       &trans        &trans
-&trans  &trans  &trans  &trans  &fr_c   &trans                    &trans  &trans        &trans      &trans       &trans        &trans
-&trans  &trans  &trans  &nb_ao  &nb_ae  &fr_oe                    &trans  &accent_down  &accent_up  &accent_hat  &accent_dots  &trans
-&trans  &trans  &nb_oe  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans      &trans       &trans        &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans            &trans        &trans      &trans       &trans        &trans
+&trans  &trans  &trans  &trans  &fr_c   &trans                    &trans            &trans        &trans      &trans       &trans        &trans
+&trans  &trans  &trans  &nb_ao  &nb_ae  &fr_oe                    &sharp_s_bracket  &accent_down  &accent_up  &accent_hat  &accent_dots  &trans
+&trans  &trans  &nb_oe  &trans  &trans  &trans  &trans    &trans  &trans            &trans        &trans      &trans       &trans        &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans            &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
