@@ -9,5 +9,6 @@ features:
   - keys
   - studio
 siblings:
+  - my_aurora_lily58_dongle
   - my_aurora_lily58_left
   - my_aurora_lily58_right
